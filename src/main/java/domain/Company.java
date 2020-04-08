@@ -1,19 +1,28 @@
 package domain;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.Id;
 
 @Entity
 public class Company extends CompanyAbstract {
+    @Column
+    private String name;
+    @Column
+    private String description;
 
-    @Id
-    private Long Id;
-
-    public Long getId() {
-        return Id;
+    public String getName() {
+        return name;
     }
 
-    public void setId(Long id) {
-        Id = id;
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 }
